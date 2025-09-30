@@ -1,4 +1,4 @@
-name : Releasing merged contents
+name : Deploying
 
 on : 
   push : 
@@ -12,5 +12,5 @@ jobs :
     steps :
     - uses : actions/checkout@v4
     - run : docker build . -t nandanaskartha/next-js-app 
-    - run : echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
+    - run : run echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
     - run : docker push nandanaskartha/next-js-app:latest

@@ -1,7 +1,7 @@
 name : Releasing merged contents
 
 on : 
-  merge : 
+  push : 
     branches : ["main"]
 
 jobs :
